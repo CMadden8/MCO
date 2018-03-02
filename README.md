@@ -2,26 +2,36 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
 
-## Development server
+# Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+run npm install to install the required modules
 
-## Code scaffolding
+# Setup
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+run ng serve to launch the app
 
-## Build
+# Notes
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## CSS
 
-## Running unit tests
+1) The CSS uses the latest version of bootstrap's flexbox
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2) The page was made to be responsive, but needs some clean up - the majority of the responsiveness is already there
 
-## Running end-to-end tests
+## JSON
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+1) The JSON file is located in assets/mock/test/test.json
 
-## Further help
+2) I've created 114 random users in the file
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+3) I've the post counts and the week numbers random, as they might appear in reality
+
+## The Bar Chart 
+
+1) I've made the axis markers dynamicly adjust to the random week numbers and post numbers, so the markers are always relevant to the current selected user
+
+## Row Selection
+
+I added a row selection dropdown that will add new rows to the user table, but I didn't have time to make a pager
+
+
