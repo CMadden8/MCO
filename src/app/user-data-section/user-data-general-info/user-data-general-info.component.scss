@@ -1,0 +1,23 @@
+
+
+$lime: #25FFC2;
+$lime-dark: #06d69b;
+$greyMediumLight:#F9F9F9;
+$greyLight: #FAFAFA;
+$greyLightV2: #EEE;
+$greyMedium: #999;
+$greyDark: #666;
+$paleYellow: #FFFFF5;
+
+.user-details-wrapper {
+  h2 { margin-bottom:2rem; margin-top:-15px; }
+}
+
+.user-details-wrapper .d-flex { margin-bottom:2rem; }
+.info-label { font-weight:bold; min-width:140px; }
+
+
+// general info
+
+.info-label { width:30%; }
+.info-value { width:70%; }

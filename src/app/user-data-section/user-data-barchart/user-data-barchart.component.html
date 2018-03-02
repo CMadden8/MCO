@@ -1,0 +1,40 @@
+<!-- posts chart -->
+
+<div class="bar-chart-container">
+
+  <div class="d-md-flex bar-chart-main">
+
+    <h3 class="number-of-posts-label">Number of posts</h3>
+
+    <ul class="axis-wrapper">
+      
+      <li class="axis">
+        <div *ngFor="let marker of axisIncrementArray" class="label">{{ marker }}</div>
+      </li>
+
+    </ul>
+
+    <ul class="chart">
+      
+      <li class="bar lime" *ngFor="let week of postCountWeeksAndPercentages" [ngClass]="{'bar-empty': week.fillPercent == 0}" [ngStyle]="{ 'height': week.fillPercent + '%' }">
+        <div class="week">Week {{ week.number }}: {{ week.fillPercent }} %</div>
+      </li>
+
+    </ul>
+
+  </div>
+
+  <div class="bar-chart-labels">
+
+    <ul class="d-flex">
+
+      <li *ngFor="let week of postCountWeeksAndPercentages">Week {{week.number}}</li>
+
+    </ul>
+
+    <h3 class="weeks-of-membership-label">Weeks of membership</h3>
+
+  </div>
+
+</div>
+

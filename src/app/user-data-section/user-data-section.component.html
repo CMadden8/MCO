@@ -1,0 +1,32 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="d-md-flex flex-wrap col-sm-12 general-info-container" *ngIf="selectedUser">
+
+      <!-- general user info -->
+
+      <div class="col-sm-12 col-lg-5">
+
+        <mco-user-data-general-info [user]="selectedUser"></mco-user-data-general-info>
+
+      </div>
+
+      <!-- posts bar chart -->
+
+      <div class="col-sm-12 col-lg-7">
+
+        <mco-user-data-barchart [user]="selectedUser"></mco-user-data-barchart>
+
+      </div>
+
+    </div>
+
+    <!-- user listings table -->
+
+    <mco-user-data-table [users]="users" (userSelect)="userSelected($event)"></mco-user-data-table>
+
+
+  </div>
+
+</div>

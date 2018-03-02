@@ -1,0 +1,50 @@
+<!-- general user information that appears to the left of the bar chart -->
+
+ <div class="Rtable Rtable--5cols Rtable--collapse col-sm-12 users-table">
+
+  <div class="Rtable-heading">
+    <h2>User Information</h2>
+  </div>
+
+  <div class="Rtable-row Rtable-row--head">
+    <div class="Rtable-cell date-cell column-heading"></div>
+    <div class="Rtable-cell topic-cell column-heading">Name</div>
+    <div class="Rtable-cell access-link-cell column-heading">Account Number</div>
+    <div class="Rtable-cell replay-link-cell column-heading">Country</div>
+    <div class="Rtable-cell pdf-cell column-heading">Date joined</div>
+  </div>
+
+  <div class="Rtable-row" *ngFor="let user of users | slice: 0: rowCount" [ngClass]="{'Rtable-row-active': user === selectedUser}" (click)="onSelect(user)">
+
+    <div class="Rtable-cell select-cell">
+      <div class="Rtable-cell--heading"></div>
+      <div class="Rtable-cell--content date-content"><input type="checkbox" name="{{user.name}}" [ngModel]="user === selectedUser"></div>
+    </div>
+    <div class="Rtable-cell name-cell">
+      <div class="Rtable-cell--content title-content">{{user.name}}</div>
+    </div>
+    <div class="Rtable-cell account-number-cell">
+      <div class="Rtable-cell--heading">Account Number</div>
+      <div class="Rtable-cell--content access-link-content">{{user.accountNumber}}</div>
+    </div>
+    <div class="Rtable-cell country-cell">
+      <div class="Rtable-cell--heading">Country</div>
+      <div class="Rtable-cell--content replay-link-content">{{user.country}}</div>
+    </div>
+    <div class="Rtable-cell Rtable-cell--foot date-cell">
+      <div class="Rtable-cell--heading">Date Joined</div>
+      <div class="Rtable-cell--content pdf-content">{{user.dateJoined}}</div>
+    </div>
+
+  </div>
+    
+</div>
+
+<!-- select rows dropdown -->
+
+<select class="row-select" [(ngModel)]="defaultRowCount" (ngModelChange)="changeRowsDisplayed($event)" >
+
+    <option *ngFor="let userRows of userRowsDisplayed" [ngValue]="userRows">{{userRows}}</option>
+  
+</select>
+
